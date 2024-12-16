@@ -45,83 +45,116 @@ void checkPinStates()
   int trigger = 0;
   // Note:  P11-2 and P12-3 are key pins
 
-  // P11-1
-  if (pd.pinState()->P11(1))
+  // P11-1 01A Outhole Kicker
+  if (pd.pinState()->P11(1) && !pd.pinState()->P12(5))
   {
     //trigger = 1;
   }
-  // P11-3
-  if (pd.pinState()->P11(3))
-  {
-    //trigger = 1;
-  }
-  // P11-4
-  if (pd.pinState()->P11(4))
-  {
-    //trigger = 1;
-  }
-  // P11-5
-  if (pd.pinState()->P11(5))
-  {
-    //trigger = 1;
-  }
-  // P11-6
-  if (pd.pinState()->P11(6))
-  {
-    //trigger = 1;
-  }
-  // P11-7
-  if (pd.pinState()->P11(7))
-  {
-    //trigger = 1;
-  }
-  // P11-8
-  if (pd.pinState()->P11(8))
-  {
-    //trigger = 1;
-  }
-  // P11-9
-  if (pd.pinState()->P11(9))
+  // P11-1 01C L F Wheel (p) & Jackpot (b) Flashers
+  else if (pd.pinState()->P11(1) && pd.pinState()->P12(5))
   {
     //trigger = 1;
   }
 
-  // P12-1
+  // P11-3 02C R F Wheel (p) & Teeth (b) Flashers
+  if (pd.pinState()->P11(3) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-4 03A Ball Shooter Kickbig
+  if (pd.pinState()->P11(4) && !pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+  // P11-4 03C Top mif (p) & L Eye (b) Flashers
+  else if (pd.pinState()->P11(4) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-5 04A Boomerang Kickbig
+  if (pd.pinState()->P11(5) && !pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+  // P11-5 04C Cat (p) & lwr Fireworks (b) Flashers
+  else if (pd.pinState()->P11(5) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-6 05A Drop Target
+  if (pd.pinState()->P11(6) && !pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+  // P11-6 05C Ducks (p) & R Fireworks (b) Flashers
+  else if (pd.pinState()->P11(6) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-7 06C Ferris Wheel (p) Flashers
+  if (pd.pinState()->P11(7) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-8 07A Knocker / Ticket Dispenser (b'box)
+  if (pd.pinState()->P11(8) && !pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+  // P11-8 07C Cyclone (p) & R Eye (b) Flashers
+  else if (pd.pinState()->P11(8) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P11-9 08C Spook House (p) & L Fireworks (b) Flashers
+  if (pd.pinState()->P11(9) && pd.pinState()->P12(5))
+  {
+    //trigger = 1;
+  }
+
+  // P12-1 09 Spook House Bonus Flasher (p)
   if (pd.pinState()->P12(1))
   {
     //trigger = 1;
   }
-  // P12-2
+
+  // P12-2 10 Playfield Gen Illumination Relay (p)
   if (pd.pinState()->P12(2))
   {
     //trigger = 1;
   }
-  // P12-4
+
+  // P12-4 11 Backglass Gen Illumination Relay (b)
   if (pd.pinState()->P12(4))
   {
     //trigger = 1;
   }
-  // P12-5
-  if (pd.pinState()->P12(5))
-  {
-    //trigger = 1;
-  }
-  // P12-6
+
+  // P12-6 13 Mystery Wheel (b) Coil B
   if (pd.pinState()->P12(6))
   {
     //trigger = 1;
   }
-  // P12-7
+
+  // P12-7 14 Mystery Wheel (b) Coil A
   if (pd.pinState()->P12(7))
   {
     //trigger = 1;
   }
-  // P12-8
+
+  // P12-8 Boomerang Flashers (p)
   if (pd.pinState()->P12(8))
   {
     //trigger = 1;
   }
-  // P12-9
+
+  // P12-9 Ferris Wheel Motor/Relay (p)
   if (pd.pinState()->P12(9))
   {
     //trigger = 1;
