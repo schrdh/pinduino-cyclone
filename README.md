@@ -1,6 +1,10 @@
 # pinduino-cyclone
 Pinduino LED programming for Cyclone pinball machine
 
+Building:
+* Use ArduinoIDE and open .ino file from src folder. Use library manager to install Pinduino library
+* Use VSCode with PlatformIO plugin and open project
+
 # Welcome
 This code is intended for use with the pinduino library.
 
